@@ -1,12 +1,12 @@
 <form class="example-form" (ngSubmit)="submitForm()">
     <mat-form-field class="example-full-width">
       <mat-label>Name</mat-label>
-      <input [(ngModel)]="project.name" matInput placeholder="" value="">
+      <input [(ngModel)]="project.name" matInput placeholder="" value="" name="name">
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Difficulty</mat-label>
-      <mat-select>
+      <mat-select [(ngModel)]="project.difficulty" name="difficulty">
         <mat-option *ngFor="let difficulty of difficulties" [value]="difficulty.value">
           {{difficulty.viewValue}}
         </mat-option>
@@ -15,7 +15,7 @@
 
     <mat-form-field class="example-full-width">
       <mat-label>Duration</mat-label>
-      <input [(ngModel)]="project.duration" matInput placeholder="" value="">
+      <input [(ngModel)]="project.duration" matInput placeholder="" value="" name="duration">
     </mat-form-field>
     <button mat-raised-button color="primary">Primary</button>
   </form>

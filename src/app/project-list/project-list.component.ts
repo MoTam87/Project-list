@@ -30,9 +30,9 @@ export class ProjectListComponent {
   };
 
   difficulties: difficulty[] = [
-    {value: '', viewValue: 'easy'},
-    {value: '', viewValue: 'medium'},
-    {value: '', viewValue: 'hard'},
+    { value: 'easy', viewValue: 'Easy' },
+    { value: 'medium', viewValue: 'Medium' },
+    { value: 'hard', viewValue: 'Hard' }
   ];
 
   getProject(){
