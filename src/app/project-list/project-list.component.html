@@ -1,0 +1,31 @@
+<form class="example-form" (ngSubmit)="submitForm()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input [(ngModel)]="project.name" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Difficulty</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let difficulty of difficulties" [value]="difficulty.value">
+          {{difficulty.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Duration</mat-label>
+      <input [(ngModel)]="project.duration" matInput placeholder="" value="">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Primary</button>
+  </form>
+
+
+
+<div class="section">
+  <div class="container" *ngFor="let project of projects$ | async">
+    <h1>{{project.name}}</h1>
+    <p>Difficulty: {{project.difficulty}}</p>
+    <p>Duration: {{project.duration}}</p>
+  </div>
+</div>

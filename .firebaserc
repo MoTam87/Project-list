@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-list-40ca0": {
+      "hosting": {
+        "project-list": [
+          "project-list-40ca0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-list-40ca0"
+  }
+}
